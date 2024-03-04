@@ -7,8 +7,8 @@ function checkExceptions(node, exceptions) {
     return false;
   }
 
-  var object = node.left.object.name;
-  var property = node.left.property.name;
+  var object = node.left.object ? node.left.object.name : '';
+  var property = node.left.property ? node.left.property.name : '';
 
   for (var i = 0, length = exceptions.length; i < length; i += 1) {
     var exception = exceptions[i];
